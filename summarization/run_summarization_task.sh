@@ -1,0 +1,28 @@
+python summarize.py --model_name mosaicml/mpt-7b \
+                    --model_path ../models/mpt-7b-keyformer \
+                    --dataset_path ./data/cnn_eval.json \
+                    --save_path ./out_model.summary \
+                    --score_path ./out_model.score \
+                    --device cuda \
+                    --task summarization \
+                    --bs 1 \
+                    --dtype bfloat16 \
+                    --causal_lm \
+                    --early_stopping \
+                    --output_summaries_only \
+                    --padding_side left \
+                    --beam 4 \
+                    --keyformer \
+                    --kv_cache 60 \
+                    --recent 30 \
+                    --tau_init 1 \
+                    --tau_end 2 \
+                    --no_repeat_ngram_size 0 \
+                    --repetition_penalty 1 \
+                    --max_tokenizer_length 1920 \
+                    --max_new_tokens 128 \
+                    --min_gen_length 30 \
+                    --num_return_sequences 1 \
+                    --seed 12345 \
+                    --n_obs 10 \
+                    --model_parallelize

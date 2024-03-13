@@ -1,0 +1,43 @@
+{
+  "_name_or_path": "cerebras/Cerebras-GPT-6.7B",
+  "activation_function": "gelu",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "auto_map": {
+    "AutoConfig": "configuration_gpt2.GPT2Config",
+    "AutoModelForCausalLM": "modeling_gpt2.GPT2LMHeadModel"
+  },
+  "keyformer_config": {
+    "keyformer": false,
+    "kv_cache": 60,
+    "recent": 30,
+    "tau_init": 1.0,
+    "tau_delta": 0.01
+  },
+  "attn_pdrop": 0.0,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.0,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_embd": 4096,
+  "n_head": 32,
+  "n_inner": 16384,
+  "n_layer": 32,
+  "n_positions": 2048,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.0,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "torch_dtype": "float32",
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 50257
+}

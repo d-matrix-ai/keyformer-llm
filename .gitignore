@@ -1,0 +1,4 @@
+**/*.bin
+models/model/
+plots/
+**/*.pdf

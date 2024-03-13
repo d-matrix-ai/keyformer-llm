@@ -1,0 +1,28 @@
+python dialogue.py --model_name <model name> \
+                    --model_path <path to model> \
+                    --dataset_path <path to data.json> \
+                    --save_path <path to out_model_dialogue> \
+                    --score_path <path to out_model_dialogue.score> \
+                    --device cuda \
+                    --task conversation \
+                    --bs 1 \
+                    --dtype bfloat16 \
+                    --causal_lm \
+                    --early_stopping \
+                    --output_summaries_only \
+                    --padding_side left \
+                    --beam 4 \
+                    --model_parallelize \
+                    --keyformer \
+                    --kv_cache 60 \
+                    --recent 30 \
+                    --tau_init 1 \
+                    --tau_end 2 \
+                    --no_repeat_ngram_size 0 \
+                    --repetition_penalty 1 \
+                    --max_tokenizer_length 1920 \
+                    --max_new_tokens 128 \
+                    --min_gen_length 30 \
+                    --num_return_sequences 1 \
+                    --seed 12345 \
+                    --n_obs 1000
